@@ -1,0 +1,39 @@
+<%= form_for(@post, html: { multipart: true }) do |f| %>
+<div class="row">
+    <div class="large-2 columns formu">
+      <h2>Titulo:</h2>
+    </div>
+    <div class="large-10 columns">
+      <%= f.text_field :title %>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="large-12 columns formu">
+      <h2>Descripcion:</h2>
+      <%= f.cktext_area :description, rows: 12 %>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="large-6 large-centered columns formu">
+      <h2>Publicidad del evento</h2>
+      <% if(! @post.meme.blank?)%>
+        <%= image_tag @post.meme.url(:medium) %>
+      <% end %>
+      <div class="row">
+        <div class="large-6 large-centered columns">
+          <%= f.file_field :meme, :id => "filebtn" %>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="large-2 large-centered columns formu">
+      <div class="actions">
+        <%= f.submit :class => "button" %>
+      </div>
+    </div>
+</div>
+
+<% end %>

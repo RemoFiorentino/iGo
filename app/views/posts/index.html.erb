@@ -1,0 +1,49 @@
+<div class="row small-12 small-centered columns">
+  <nav aria-label="You are here:" role="navigation">
+    <ul class="breadcrumbs">
+      <li class="unavailable">Tags</li>
+      <li><a href="#">Universidad</a></li>
+      <li><a href="#">Deportes</a></li>
+      <li><a href="#">Academia</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="row small-12 small-centered columns" id="destacado">
+  <% post = Post.find_by title: 'Evento destacado'%>
+  <div class="large-4 columns">
+    <%= image_tag post.meme.url(:medium) %>
+    <br>
+  </div>
+  <div class="large-8 columns">
+    <h3 class="show-for-small"><%= post.title %><hr/></h3>
+    <div class="panel">
+      <h4 class="hide-for-small"><%= post.title %><hr/></h4>
+      <h5 class="subheader">
+        <%= render :inline => post.description %>
+        <%= link_to 'see more...', post %>
+      </h5>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="row small-12 small-centered columns" id="listado">
+  <div class="large-12 show-for-small columns">
+    <h3>Listado de Eventos</h3><hr>
+  </div>
+  <% @posts.each do |post| %>
+  <div class="large-3 small-6 columns">
+    <div id="imagebg">
+      <% if(!post.meme.blank?)%>
+        <%= link_to image_tag(post.meme.url(:medium)), post %>
+      <% else %>
+        <%= link_to image_tag("404.jpg"), post %>
+      <% end %>
+    </div>
+    <div class="panel" id="fitin">
+      <h6><%= post.title %></h6>
+    </div>
+  </div>
+  <% end %>
+</div>

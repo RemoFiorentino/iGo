@@ -1,0 +1,141 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+body {
+   background-image: url("projects-area.gif") 
+} 
+
+#destacado{
+   background-image: url("bg-landing.gif");
+   padding: 20px 0;
+}
+
+#destacado img{
+    max-height: 300px;
+    max-width: 300px;
+}
+
+#destacado .panel{
+    max-height: 300px;
+    height: 300px;
+}
+
+#destacado h3, #destacado h4{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+#destacado h5{
+    text-align: Justify;
+    font-family: Tahoma;
+}
+
+#imagebg{
+    max-height: 205px;
+    max-width: 205px;
+    height: 205px;
+    width: 205px;
+    overflow: hidden;
+}
+
+
+#listado img{
+    margin: auto 0;
+    max-height: 205px;
+    max-width: 205px;
+    height: 205px;
+    width: 205px;
+}
+
+#listado .panel{
+    height: 70px;
+    text-align: center;
+}
+
+#show{
+   background-image: url("bg-landing.gif");
+   padding: 20px 0;
+}
+
+#show img{
+    max-height: 370px;
+    max-width:  370px;
+    height: 370px;
+    width:  370px;
+}
+
+#show h4, #show h5{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+#show #post{
+    background-image: url("trama.jpg");
+    margin-right: 15px;
+    min-height: 370px;
+}
+
+#show h6{
+    text-align: Justify;
+    font-family: Tahoma;
+}
+
+#talvez img{
+    max-height: 200px;
+    max-width:  200px;
+    height: 200px;
+    width:  200px;
+}
+
+#talvez h4{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: Arial;
+    color: white;
+    background-image: url("bg-navbar-inner.gif");
+}
+
+.formu h2{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.formu h3{
+    color: white;
+    text-align: center;
+    font-weight: lighter;
+}
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+  position: relative;
+  top: 20px;
+  left: 20%;
+}
+
